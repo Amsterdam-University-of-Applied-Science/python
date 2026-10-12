@@ -1,0 +1,1006 @@
+﻿<!DOCTYPE html>
+<html lang="nl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Voortgang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+  <style>
+    .description {
+      margin-bottom: 16px;
+      color: #555;
+      font-size: 0.95em;
+    }
+    .voortgang-table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .voortgang-table th, .voortgang-table td {
+      border: 1px solid #ddd;
+      padding: 2px 3px;
+      text-align: center;
+      vertical-align: top;
+      font-size: 0.78em;
+      font-family: 'Arial Narrow', Arial, sans-serif;
+    }
+    .voortgang-table th:nth-child(n+3),
+    .voortgang-table td:nth-child(n+3) {
+      width: 9%;
+    }
+    .voortgang-table td:nth-child(2) {
+      text-align: left;
+    }
+    .voortgang-table th {
+      background-color: #4472C4;
+      color: white;
+      line-height: 1.15;
+    }
+    .voortgang-table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    .voortgang-table tbody tr:hover {
+      background-color: #e8f0fe;
+    }
+    .points-row {
+      background-color: #d9e1f2 !important;
+      font-style: italic;
+      color: #333;
+    }
+    .totals-row {
+      background-color: #d9e1f2 !important;
+      font-weight: bold;
+    }
+    .completed { color: #2e7d32; }
+    .empty { color: #aaa; }
+    .cijfer { font-weight: bold; }
+    .cijfer-0 { color: #c62828; }
+    .cijfer-low { color: #e65100; }
+    .cijfer-mid { color: #f9a825; }
+    .cijfer-high { color: #2e7d32; }
+    /* # column — visual index indicator */
+    .voortgang-table tbody td:first-child {
+      background-color: #d9e1f2 !important;
+      color: #555;
+    }
+    /* Naam header — sortable */
+    .sortable { cursor: pointer; user-select: none; }
+    .sortable:hover { background-color: #5a85d0; }
+    .sort-indicator { margin-left: 4px; font-size: 0.85em; opacity: 0.8; }
+    /* Tab styling */
+    .tab-nav { display:flex; gap:4px; border-bottom:2px solid #4472C4; margin-bottom:16px; }
+    .tab-btn  {
+      padding:5px 20px;
+      border:1px solid #ccc;
+      border-bottom:none;
+      background:#e8f0fe;
+      cursor:pointer;
+      font-family:'Arial Narrow',Arial,sans-serif;
+      font-size:0.9em;
+      border-radius:4px 4px 0 0;
+      color:#333;
+    }
+    .tab-btn.active { background:#4472C4; color:white; border-color:#4472C4; }
+    .tab-pane { display:none; }
+    .tab-pane.active { display:block; }
+
+    /* Overzicht: gelijke breedte voor de 3 puntenkolommen */
+    #overview th:nth-child(3),
+    #overview th:nth-child(4),
+    #overview th:nth-child(5),
+    #overview td:nth-child(3),
+    #overview td:nth-child(4),
+    #overview td:nth-child(5) {
+      width: 17%;
+    }
+  </style>
+</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+<div class="row">
+<div class="col-sm-12">
+<div class="decoration"></div>
+</div>
+<div class="col-xs-12 col-sm-offset-2 col-sm-8"><!-- Descriptions -->
+<p class="description"><strong>E-learnings:</strong> De e-learnings zijn courses op Kaggle (ML community) waaraan in de les of buiten de les gewerkt wordt. Studenten uploaden een certificaat.</p>
+<p class="description"><strong>Class assignments:</strong> De class assignments zijn korte opdrachten die in de klas tijdens de les op 1A4 worden uitgewerkt. Studenten uploaden de uitwerking.</p>
+<h2>Voortgang</h2>
+<!-- Tabs -->
+<div class="tab-nav"><button class="tab-btn active" onclick="showTab(0)">E-learnings</button> <button class="tab-btn" onclick="showTab(1)">Class Assignments</button> <button class="tab-btn" onclick="showTab(2)">Overzicht</button></div>
+<!-- TAB 1: E-learnings (geüpdatet) -->
+<div class="tab-pane active" id="elearnings">
+<table class="voortgang-table" style="width: 100%; height: 1423.14px;">
+<thead>
+<tr style="height: 27.9375px;">
+<th style="width: 6.28659%;">#</th>
+<th class="sortable" style="width: 38.5705%;" onclick="sortNaam(this)">Naam <span class="sort-indicator">⇅</span></th>
+<th style="width: 8.98493%;">1</th>
+<th style="width: 8.98493%;">2</th>
+<th style="width: 8.98493%;">3</th>
+<th style="width: 8.98493%;">4</th>
+<th style="width: 8.98493%;">5</th>
+<th style="width: 10.0518%;">Punten</th>
+</tr>
+<tr class="points-row" style="height: 43.6px;">
+<td style="width: 6.28659%;"></td>
+<td style="width: 38.5705%;">Punten</td>
+<td style="width: 8.98493%;">2</td>
+<td style="width: 8.98493%;">2</td>
+<td style="width: 8.98493%;">2</td>
+<td style="width: 8.98493%;">2</td>
+<td style="width: 8.98493%;">2</td>
+<td style="width: 10.0518%;"></td>
+</tr>
+</thead>
+<tbody>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">1</td>
+<td style="width: 38.5705%;">max.de.greeff@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">2</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/ayoubb24">ayoub.moutahid@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">16-09</td>
+<td class="completed" style="width: 8.98493%;">18-09</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-low" style="width: 10.0518%;">4</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">3</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/kadishakelly">kadisha.kelly@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">16-09</td>
+<td class="completed" style="width: 8.98493%;">02-10</td>
+<td class="completed" style="width: 8.98493%;">09-10</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-mid" style="width: 10.0518%;">6</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">4</td>
+<td style="width: 38.5705%;">robine.offringa@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">5</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/connordecloe">connor.de.cloe@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">19-09</td>
+<td class="completed" style="width: 8.98493%;">06-10</td>
+<td class="completed" style="width: 8.98493%;">06-10</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-mid" style="width: 10.0518%;">6</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">6</td>
+<td style="width: 38.5705%;">chevanio.salamony@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">7</td>
+<td style="width: 38.5705%;">bob.veldkamp@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">8</td>
+<td style="width: 38.5705%;">max.lekkerkerk@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">9</td>
+<td style="width: 38.5705%;">damian.pijnaker@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">10</td>
+<td style="width: 38.5705%;">thijn.smale@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">11</td>
+<td style="width: 38.5705%;">victor.elbers@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">12</td>
+<td style="width: 38.5705%;">danny.kraaij@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">13</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/liekeheijnen">lieke.heijnen.heijnen@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">21-09</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-low" style="width: 10.0518%;">2</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">14</td>
+<td style="width: 38.5705%;">meredith.madura@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">15</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/rikpentenga">rik.pentenga@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">18-09</td>
+<td class="completed" style="width: 8.98493%;">07-10</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-low" style="width: 10.0518%;">4</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">16</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/liamjurgens">liam.jurgens@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">06-10</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-low" style="width: 10.0518%;">2</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">17</td>
+<td style="width: 38.5705%;">maarten.oorschot@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">18</td>
+<td style="width: 38.5705%;">max.ramaker@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">19</td>
+<td style="width: 38.5705%;">sanvir.singh@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">20</td>
+<td style="width: 38.5705%;">quintin.musters@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">21</td>
+<td style="width: 38.5705%;">julius.van.tol@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">22</td>
+<td style="width: 38.5705%;">sofiane.mahti@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">23</td>
+<td style="width: 38.5705%;">jack.osullivan.ramos@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">24</td>
+<td style="width: 38.5705%;">masi.razaghzadeh@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">25</td>
+<td style="width: 38.5705%;">kevin.schonhage@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">26</td>
+<td style="width: 38.5705%;">ingmar.soels@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">27</td>
+<td style="width: 38.5705%;">nisim.abramov@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">28</td>
+<td style="width: 38.5705%;">pelle.frank@hva.nl</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-0" style="width: 10.0518%;">0</td>
+</tr>
+<tr style="height: 43.6px;">
+<td style="width: 6.28659%;">29</td>
+<td style="width: 38.5705%;"><a href="https://www.kaggle.com/lonnekemonsma">lonneke.monsma@hva.nl</a></td>
+<td class="completed" style="width: 8.98493%;">11-09</td>
+<td class="completed" style="width: 8.98493%;">19-09</td>
+<td class="completed" style="width: 8.98493%;">21-09</td>
+<td class="completed" style="width: 8.98493%;">02-10</td>
+<td class="empty" style="width: 8.98493%;">—</td>
+<td class="cijfer cijfer-high" style="width: 10.0518%;">8</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="totals-row" style="height: 43.6px;">
+<td style="width: 6.28659%;"></td>
+<td style="width: 38.5705%;">Aantal completed</td>
+<td style="width: 8.98493%;">7</td>
+<td style="width: 8.98493%;">5</td>
+<td style="width: 8.98493%;">3</td>
+<td style="width: 8.98493%;">1</td>
+<td style="width: 8.98493%;">0</td>
+<td style="width: 10.0518%;"></td>
+</tr>
+<tr class="totals-row" style="height: 43.6px;">
+<td style="width: 6.28659%;"></td>
+<td style="width: 38.5705%;">Gemiddelde punten</td>
+<td style="width: 8.98493%;"></td>
+<td style="width: 8.98493%;"></td>
+<td style="width: 8.98493%;"></td>
+<td style="width: 8.98493%;"></td>
+<td style="width: 8.98493%;"></td>
+<td style="width: 10.0518%;">1.1</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- TAB 2: Class Assignments -->
+<div class="tab-pane" id="assignments">
+<table class="voortgang-table">
+<thead>
+<tr>
+<th>#</th>
+<th class="sortable" onclick="sortNaam(this)">Naam <span class="sort-indicator">⇅</span></th>
+<th>04-09</th>
+<th>11-09</th>
+<th>18-09</th>
+<th>25-09</th>
+<th>02-10</th>
+<th>09-10</th>
+<th>23-10</th>
+<th>Punten</th>
+</tr>
+<tr class="points-row">
+<td></td>
+<td>Punten</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td>2</td>
+<td></td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>max.de.greeff@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ayoub.moutahid@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>kadisha.kelly@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">7.5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>robine.offringa@hva.nl</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-low">4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>connor.de.cloe@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="empty">—</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-low">4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>chevanio.salamony@hva.nl</td>
+<td class="completed">11-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">10</td>
+</tr>
+<tr>
+<td>7</td>
+<td>bob.veldkamp@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="empty">—</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-mid">5</td>
+</tr>
+<tr>
+<td>8</td>
+<td>max.lekkerkerk@hva.nl</td>
+<td class="completed">21-09</td>
+<td class="completed">21-09</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-mid">5.5</td>
+</tr>
+<tr>
+<td>9</td>
+<td>damian.pijnaker@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">9.5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>thijn.smale@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">9.5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>victor.elbers@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="completed">18-09</td>
+<td class="completed">09-10</td>
+<td class="completed">09-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">6</td>
+</tr>
+<tr>
+<td>12</td>
+<td>danny.kraaij@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="completed">18-09</td>
+<td class="completed">09-10</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">7</td>
+</tr>
+<tr>
+<td>13</td>
+<td>lieke.heijnen.heijnen@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">09-10</td>
+<td class="completed">09-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">7</td>
+</tr>
+<tr>
+<td>14</td>
+<td>meredith.madura@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">25-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">10</td>
+</tr>
+<tr>
+<td>15</td>
+<td>rik.pentenga@hva.nl</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">9.5</td>
+</tr>
+<tr>
+<td>16</td>
+<td>liam.jurgens@hva.nl</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-0">0</td>
+</tr>
+<tr>
+<td>17</td>
+<td>maarten.oorschot@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">21-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">10</td>
+</tr>
+<tr>
+<td>18</td>
+<td>max.ramaker@hva.nl</td>
+<td class="completed">11-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="completed">09-10</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">10</td>
+</tr>
+<tr>
+<td>19</td>
+<td>sanvir.singh@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">8</td>
+</tr>
+<tr>
+<td>20</td>
+<td>quintin.musters@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">8</td>
+</tr>
+<tr>
+<td>21</td>
+<td>julius.van.tol@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">18-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">9</td>
+</tr>
+<tr>
+<td>22</td>
+<td>sofiane.mahti@hva.nl</td>
+<td class="completed">07-09</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-low">3.1</td>
+</tr>
+<tr>
+<td>23</td>
+<td>jack.osullivan.ramos@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-mid">5.5</td>
+</tr>
+<tr>
+<td>24</td>
+<td>masi.razaghzadeh@hva.nl</td>
+<td class="completed">07-09</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-low">3.1</td>
+</tr>
+<tr>
+<td>25</td>
+<td>kevin.schonhage@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-mid">6</td>
+</tr>
+<tr>
+<td>26</td>
+<td>ingmar.soels@hva.nl</td>
+<td class="completed">04-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="completed">25-09</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">8</td>
+</tr>
+<tr>
+<td>27</td>
+<td>nisim.abramov@hva.nl</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-0">0</td>
+</tr>
+<tr>
+<td>28</td>
+<td>pelle.frank@hva.nl</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-0">0</td>
+</tr>
+<tr>
+<td>29</td>
+<td>lonneke.monsma@hva.nl</td>
+<td class="completed">11-09</td>
+<td class="completed">11-09</td>
+<td class="completed">18-09</td>
+<td class="completed">02-10</td>
+<td class="completed">02-10</td>
+<td class="empty">—</td>
+<td class="empty">—</td>
+<td class="cijfer cijfer-high">8</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="totals-row">
+<td></td>
+<td>Aantal completed</td>
+<td>25</td>
+<td>21</td>
+<td>25</td>
+<td>20</td>
+<td>22</td>
+<td>10</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr class="totals-row">
+<td></td>
+<td>Gemiddelde punten</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>6.5</td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- TAB 3: Overzicht -->
+<div class="tab-pane" id="overview">
+<table class="voortgang-table">
+<thead>
+<tr>
+<th>#</th>
+<th class="sortable" onclick="sortNaam(this)">Naam <span class="sort-indicator">⇅</span></th>
+<th>Punten E-learnings</th>
+<th>Punten Class Assignments</th>
+<th>Punten gemiddeld</th>
+</tr>
+</thead>
+<tbody id="overview-body"><!-- Wordt met JavaScript gevuld --></tbody>
+<tfoot>
+<tr class="totals-row">
+<td></td>
+<td>Gemiddelde punten</td>
+<td id="avg-elearn"></td>
+<td id="avg-assign"></td>
+<td id="avg-overall"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+<footer>
+<div id="logo" class="logo pull-right"></div>
+</footer></main></div>
+<p>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+</p>
+<p><script>
+  function sortNaam(th) {
+    var tbody = th.closest('table').querySelector('tbody');
+    var rows = Array.from(tbody.querySelectorAll('tr'));
+    var asc = th.dataset.sort !== 'asc';
+    th.dataset.sort = asc ? 'asc' : 'desc';
+    var indicator = th.querySelector('.sort-indicator');
+    if (indicator) {
+      indicator.textContent = asc ? '▲' : '▼';
+    }
+    rows.sort(function(a, b) {
+      var na = a.cells[1].textContent.trim().toLowerCase();
+      var nb = b.cells[1].textContent.trim().toLowerCase();
+      return asc ? na.localeCompare(nb) : nb.localeCompare(na);
+    });
+    rows.forEach(function(row, i) {
+      row.cells[0].textContent = i + 1;
+      tbody.appendChild(row);
+    });
+  }
+
+  function showTab(n) {
+    document.querySelectorAll('.tab-btn').forEach(function(b, i) {
+      b.classList.toggle('active', i === n);
+    });
+    document.querySelectorAll('.tab-pane').forEach(function(p, i) {
+      p.classList.toggle('active', i === n);
+    });
+  }
+
+  // Overzicht-tab opbouwen
+  function buildOverview() {
+    var elearnRows = document.querySelector('#elearnings tbody').rows;
+    var assignRows = document.querySelector('#assignments tbody').rows;
+    var overviewBody = document.getElementById('overview-body');
+
+    if (!elearnRows || !assignRows || !overviewBody) return;
+
+    // Map naam -> punten class assignments
+    var assignMap = {};
+    Array.from(assignRows).forEach(function(row) {
+      var name = row.cells[1].textContent.trim();
+      var punten2 = parseFloat(row.cells[row.cells.length - 1].textContent.trim());
+      if (isNaN(punten2)) punten2 = 0;
+      assignMap[name] = punten2;
+    });
+
+    overviewBody.innerHTML = '';
+
+    var sum1 = 0, sum2 = 0, sumAvg = 0, count = 0;
+
+    // Overzicht op basis van E-learning-rijen
+    Array.from(elearnRows).forEach(function(row, index) {
+      var name = row.cells[1].textContent.trim();
+      var punten1 = parseFloat(row.cells[row.cells.length - 1].textContent.trim());
+      if (isNaN(punten1)) punten1 = 0;
+
+      var punten2 = assignMap[name] != null ? assignMap[name] : 0;
+      var avg = (punten1 + punten2) / 2;
+      var avgDisplay = (avg % 1 === 0) ? avg : avg.toFixed(1);
+
+      count++;
+      sum1 += punten1;
+      sum2 += punten2;
+      sumAvg += avg;
+
+      var tr = document.createElement('tr');
+
+      var tdIndex = document.createElement('td');
+      tdIndex.textContent = index + 1;
+
+      var tdName = document.createElement('td');
+      tdName.textContent = name;
+
+      var tdP1 = document.createElement('td');
+      tdP1.textContent = punten1;
+
+      var tdP2 = document.createElement('td');
+      tdP2.textContent = punten2;
+
+      var tdAvg = document.createElement('td');
+      tdAvg.textContent = avgDisplay;
+
+      tr.appendChild(tdIndex);
+      tr.appendChild(tdName);
+      tr.appendChild(tdP1);
+      tr.appendChild(tdP2);
+      tr.appendChild(tdAvg);
+
+      overviewBody.appendChild(tr);
+    });
+
+    // Gemiddelden in totaalregel
+    function formatAvg(x) {
+      return (x % 1 === 0) ? x : x.toFixed(1);
+    }
+    if (count > 0) {
+      document.getElementById('avg-elearn').textContent = formatAvg(sum1 / count);
+      document.getElementById('avg-assign').textContent = formatAvg(sum2 / count);
+      document.getElementById('avg-overall').textContent = formatAvg(sumAvg / count);
+    }
+  }
+
+  // Logo taalvariant
+  try {
+    var lang = window.top.document.documentElement.lang;
+    if (lang && lang.indexOf('nl') > -1) {
+      document.getElementById('logo').classList.add('dutch');
+    }
+  } catch(e) {}
+
+  // Bouw het overzicht zodra de pagina geladen is
+  document.addEventListener('DOMContentLoaded', buildOverview);
+</script></p></body></html>

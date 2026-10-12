@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>HvA Basic Page</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Bootstrap CDN CSS -->
+	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+
+	<!-- Course Styles -->
+	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+<div class="row">
+<div class="col-sm-12">
+<h3 class="decoration"></h3>
+</div>
+<div class="col-xs-12 col-sm-offset-2 col-sm-8">
+<h3><span style="font-size: 19px;">Lesplan week 1</span></h3>
+<h3>3. Code y-finance</h3>
+<div>
+<div># in deze module wordt gebruik gemaakt van de yfinance library</div>
+<br>
+<div>def get_company_info(ticker):</div>
+<div>&nbsp; &nbsp; try:</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; # Create a Ticker object</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; ticker_obj = yf.Ticker(ticker)</div>
+<br>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; # Get the company info</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; info = ticker_obj.info</div>
+<br>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; # Extract company name and address</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; company_name = info.get('longName', 'Name not available')</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; company_address = info.get('address1', 'Address not available')</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; company_city = info.get('city', 'City not available')</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; company_state = info.get('state', 'State not available')</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; company_zip = info.get('zip', 'Zip not available')</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; company_country = info.get('country', 'Country not available')</div>
+<br>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; return {</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'name': company_name,</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'address': company_address,</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'city': company_city,</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'state': company_state,</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'zip': company_zip,</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'country': company_country</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; }</div>
+<div>&nbsp; &nbsp; except Exception as e:</div>
+<div>&nbsp; &nbsp; &nbsp; &nbsp; return f"An error occurred: {str(e)}"</div>
+<br>
+<div>ticker = "TSLA"</div>
+<div>company_info = get_company_info(ticker) &nbsp;# Store the result in a variable</div>
+<br>
+<div># Print company info in address format</div>
+<div>print(f"{company_info['name']}\n{company_info['address']}\n{company_info['city']}\n{company_info['state']}, {company_info['zip']}\n{company_info['country']}")</div>
+<div></div>
+<div></div>
+</div>
+<table border="1" style="border-collapse: collapse; width: 100.046%;"><colgroup><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"></colgroup>
+<tbody>
+<tr>
+<td style="background-color: #fbeeb8;">1</td>
+<td style="background-color: #ffffff;">2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h3>1. Prompt generation (openAI)</h3>
+<p>&nbsp;Stappen voor het genereren van een prompt uit pandas:</p>
+<ul>
+<li>Genereer een API Key</li>
+<li>Stel een vraag aan OpenAI in de playground</li>
+<li>Open google colab en kopier de python code uit de playground</li>
+<li>Voorbeeld gebruik notebook: <a href="https://colab.research.google.com/drive/1ifNmAKWjz8V3I1_czbEAjw-wvP4SRETW?usp=sharing" target="_blank" title="example-prompt-pandas" rel="noopener">example-prompt-pandas</a></li>
+</ul>
+<p></p>
+<h3>2. CBS</h3>
+<p>mogelijke databron voor stages en afstudeeropdrachten</p>
+<ul>
+<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://github.com/statistiekcbs" target="_blank" title="cbs odata v3 en v4 libraries" rel="noopener">cbs odata v3 en v4 libraries</a></li>
+<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://colab.research.google.com/drive/1B8u2SD1W_Y_230YBZDyPBP_oBSvl4NZ2?usp=sharing" target="_blank" title="geopandas library" rel="noopener">geopandas library</a></li>
+<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://colab.research.google.com/drive/1abnDBC8VqBhnqaRZhwGt79HD7EVW_wK7?usp=sharing" target="_blank" title="cartography example" rel="noopener">cartography example</a></li>
+<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://colab.research.google.com/drive/1Tru02ZsgdgvBP1nmfQ6sctgqjkmIilxG?usp=sharing" target="_blank" title="xkcd font" rel="noopener">xkcd font</a></li>
+</ul>
+<p></p>
+</div>
+</div>
+<footer>
+<div id="logo" class="logo pull-right"></div>
+</footer></main></div>
+<!-- jQuery local fallback (Bootstrap Dependency) -->
+<p>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+</p>
+<!-- Bootstrap CDN JS -->
+<p>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+</p>
+<!-- SVG Fallback JS -->
+<p>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+</p>
+<!-- Course Scripts -->
+<p>
+<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+<script>
+		var lang = window.top.document.documentElement.lang;
+
+		if (lang.indexOf('nl') > -1) {
+			$("#logo").addClass("dutch");
+		}
+	</script></p></body></html>
