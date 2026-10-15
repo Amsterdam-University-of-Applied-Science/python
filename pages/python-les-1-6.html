@@ -10,14 +10,16 @@
 
 	<!-- Course Styles -->
 	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
-</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+</head><body><div class="container-fluid"><main>
 <div class="row">
 <div class="col-sm-12">
 <div class="decoration"></div>
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
 <p></p>
-<table border="1" style="border-collapse: collapse; width: 100.046%;"><colgroup><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"></colgroup>
+
+<!-- 1. Week-strip (8 weken; week 6 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
 <tbody>
 <tr>
 <td>1</td>
@@ -27,42 +29,79 @@
 <td>5</td>
 <td style="background-color: #fbeeb8;">6</td>
 <td>7</td>
+<td>8</td>
 </tr>
 </tbody>
 </table>
-<h3><span style="font-size: 19px;">Lesplan week 6</span></h3>
+
+<!-- 2. Titel + hoofdstukken -->
+<h3><span style="font-size: 19px;">Les 1.6 &mdash; Besturingssysteem en bestanden</span></h3>
+<p>Spronck, hoofdstukken 15&ndash;18</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In les 1.5 behandelden we de datastructuren (tuples, lists, dictionaries, sets). Je kunt nu data in collecties opslaan en bewerken.</p>
+<h4>Vandaag</h4>
+<p>We stappen van data <em>in het geheugen</em> naar data <em>op schijf</em>: bestanden lezen/schrijven, fouten afvangen (exceptions) en met het besturingssysteem werken.</p>
+
+<!-- 4. Hoofdstukken en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12%;"><col style="width: 63%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Hoofdstuk</strong></td>
+<td><strong>Onderwerp</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2547/overview/" target="_blank" rel="noopener">15</a></td>
+<td>Besturingssysteem</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2548/overview/" target="_blank" rel="noopener">16</a></td>
+<td>Tekstbestanden</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2549/overview/" target="_blank" rel="noopener">17</a></td>
+<td>Exceptions</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2550/overview/" target="_blank" rel="noopener">18</a></td>
+<td>Binaire bestanden</td>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 5. Library -->
+<h4>Libraries</h4>
 <ul>
-<li style="list-style-type: none;">
+<li><strong>pathlib:</strong> netjes werken met paden en mappen. <a href="https://docs.python.org/3/library/pathlib.html" target="_blank" rel="noopener">Documentatie</a></li>
+<li><strong>csv &amp; json:</strong> tekstformaten, leesbaar in elke editor. <a href="https://docs.python.org/3/library/csv.html" target="_blank" rel="noopener">csv</a> &middot; <a href="https://docs.python.org/3/library/json.html" target="_blank" rel="noopener">json</a></li>
+</ul>
+<p>Daarnaast kijken we naar binaire bestandsformaten: <strong>excel</strong> (spreadsheet) en <strong>parquet</strong> (kolomgericht, gecomprimeerd, getypeerd &mdash; de standaard voor big data). Parquet introduceren we hier als <em>concept</em>; hands-on met pandas volgt in les 1.7.</p>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 1.7) gaan we naar object ori&euml;ntatie &mdash; je eigen datatypes bouwen (hfdst. 19&ndash;22).</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
 <ul>
-<li>Voortgang oefeningen (of werkplaats) delen</li>
-<li>Herhaling
-<ul>
-<li><a href="https://colab.research.google.com/drive/15rjNuxTrQsAJEatiGt1ka9xKJkQVfrzc?usp=sharing" title="seaborn" target="_blank" rel="noopener">seaborn</a></li>
+<li>Quiz: <em>volgt</em></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/data-cleaning" target="_blank" rel="noopener">Data Cleaning</a></li>
 </ul>
-</li>
-<li>Libraries<br>
-<ul>
-<li><a href="https://colab.research.google.com/drive/1NCx71OCF9TptmVa0b_MIZiipESpGp0nv?usp=sharing" target="_blank" title="tuples" rel="noopener">tuples</a></li>
-</ul>
-</li>
-<li>Oefening
-<ul>
-<li><a href="https://colab.research.google.com/drive/1tgZSzj3ACuWAeGasvFojTWe6EKfvaENT?usp=sharing" target="_blank" title="multiple regression" rel="noopener">multiple regression</a></li>
-</ul>
-</li>
-<li>Google Colab Utilities
-<ul>
-<li><a href="https://colab.research.google.com/drive/1330ID-BWOy1XIqzj8kDRfItXVgGy3Lqp?usp=sharing" target="_blank" title="nbconvert" rel="noopener">nbconvert</a></li>
-<li>colab command pane</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+
+<p></p>
 </div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>

@@ -17,7 +17,9 @@
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
 <p></p>
-<table border="1" style="border-collapse: collapse; width: 100.046%;"><colgroup><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"></colgroup>
+
+<!-- 1. Week-strip (8 weken; week 3 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
 <tbody>
 <tr>
 <td>1</td>
@@ -27,40 +29,73 @@
 <td>5</td>
 <td>6</td>
 <td>7</td>
+<td>8</td>
 </tr>
 </tbody>
 </table>
-<h3><span style="font-size: 19px;">Lesplan week 3</span></h3>
-<p>Terugkijken op: </span></p>
+
+<!-- 2. Titel + hoofdstukken -->
+<h3><span style="font-size: 19px;">Les 1.3 &mdash; Condities en iteraties</span></h3>
+<p>Spronck, hoofdstukken 5&ndash;7</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In les 1.2 leerden we expressies en variabelen &mdash; waarden berekenen en bewaren.</p>
+<h4>Vandaag</h4>
+<p>We laten het programma keuzes maken (condities) en dingen herhalen (iteraties), en gebruiken eenvoudige functies.</p>
+
+<!-- 4. Hoofdstukken en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12%;"><col style="width: 63%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Hoofdstuk</strong></td>
+<td><strong>Onderwerp</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2537/overview/" target="_blank" rel="noopener">5</a></td>
+<td>Eenvoudige functies</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2538/overview/" target="_blank" rel="noopener">6</a></td>
+<td>Condities</td>
+<td>&mdash;</td>
+</tr>
+<tr>
+<td><a href="https://dodona.be/nl/series/2539/overview/" target="_blank" rel="noopener">7</a></td>
+<td>Iteraties</td>
+<td>&mdash;</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 5. Library -->
+<h4>Libraries</h4>
 <ul>
-<li>les 1 &amp; les 2 a.d.h.v. geleerde begrippen (datatypes)</span></li>
+<li><strong>datetime:</strong> werken met datums en tijden (standard library). <a href="https://docs.python.org/3/library/datetime.html" target="_blank" rel="noopener">Documentatie</a></li>
+<li><strong>dateutil:</strong> breidt datetime uit met o.a. automatisch parsen van datums en rekenen met maanden en jaren &mdash; erg handig bij financi&euml;le data en tijdreeksen. <a href="https://dateutil.readthedocs.io/" target="_blank" rel="noopener">Documentatie</a></li>
 </ul>
-<p>Verband met de werkplaats:</span></p>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 1.4) schrijven we eigen functies, kijken we naar recursie en beginnen we met strings (hfdst. 8&ndash;10).</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
 <ul>
-<li>Welke datatypes hebben jullie gebruikt met:</span>
-<ul>
-<li>Pandas?</span></li>
-<li>Matplotlib?</span></li>
+<li>Quiz: <em>volgt</em></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/python" target="_blank" rel="noopener">Python</a></li>
 </ul>
-</li>
-</ul>
-<p>Onderwerp vandaag (API's &amp; Pandas)</span></p>
-<ul>
-<li><a href="https://colab.research.google.com/drive/1G0PmeKeJzA9irg4qQ8v3waCt1ZCClBHY?usp=sharing" target="_blank" title="Pandas" rel="noopener">Pandas </a>(Vanderplas, "<a rel="noopener" title="Data Manipulation with Pandas" target="_blank" href="https://jakevdp.github.io/PythonDataScienceHandbook/03.00-introduction-to-pandas.html">Data Manipulation with Pandas<span aria-hidden="true"></span></a>")</span></li>
-<li><a href="https://colab.research.google.com/drive/1abnDBC8VqBhnqaRZhwGt79HD7EVW_wK7?usp=sharing" target="_blank" title="Nederland" rel="noopener">Nederland</a> (Nationaal Georegister) &gt; API is gewijzigd (niet 19/9)</span></li>
-<li><a href="https://colab.research.google.com/drive/1VkW5pMBdPOth_Amo16b6bbaGpGqemyvt?usp=sharing" target="_blank" title="Amsterdam" rel="noopener">Amsterdam</a> (Nationaal Georegister) &gt; API is gewijzigd (niet 19/9)</span></li>
-</ul>
-<p>Nieuwe opdracht 2:</span></p>
-<ul>
-<li>Gebruik de <strong>cbsodata</strong> library voor het inlezen van een bestand van het CBS (inflatie Jaarmutatie consumentenprijsindex; vanaf 1963, code 70936NED)</span></li>
-<li>Analyseer de data (descriptive statistics)</span></li>
-<li>Visualiseer de data</span></li>
-</ul>
-<h1></h1>
+
+<p></p>
 </div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>
