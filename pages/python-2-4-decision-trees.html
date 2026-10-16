@@ -73,7 +73,21 @@
 
 <!-- 6. Class assignment -->
 <h4>Class assignment</h4>
-<p>De opdracht die je deze les inlevert (1,25pt).</p>
+<p>De opdracht die je deze les inlevert (1,25pt). Te doen in dit lesuur (50 min), met behulp van een coding agent.</p>
+<p><strong>Doel:</strong> je <em>vergelijkt</em> een decision tree met een random forest op dezelfde data en <em>verklaart</em> het verschil in overfitting.</p>
+<ol>
+<li><strong>Data &amp; modellen (15 min):</strong> kies een dataset (bijv. <code>load_wine</code> of <code>load_breast_cancer</code> uit <code>sklearn.datasets</code>, of je eigen data). Laat de agent een <code>DecisionTreeClassifier</code> &eacute;n een <code>RandomForestClassifier</code> trainen op dezelfde train/test-split.</li>
+<li><strong>Meet (10 min):</strong> laat de agent voor beide modellen de score op de <strong>trainingsset</strong> en de <strong>testset</strong> tonen.</li>
+<li><strong>Analyseer (20 min):</strong> beantwoord in je notebook, in woorden:
+<ul>
+<li>Welk model heeft het grootste gat tussen train- en testscore? Wat zegt dat over <strong>overfitting</strong>?</li>
+<li>Waarom heeft een random forest hier (meestal) minder last van overfitting dan een enkele boom?</li>
+<li>Wat gebeurt er met de scores als je de <code>max_depth</code> van de boom verlaagt? Probeer het en verklaar.</li>
+</ul>
+</li>
+<li><strong>Conclusie (5 min):</strong> &eacute;&eacute;n alinea &mdash; welk model zou je kiezen voor deze data, en waarom?</li>
+</ol>
+<p><strong>Inleveren:</strong> je notebook (<code>.ipynb</code>) met de code, de train/test-scores en je geschreven analyse bij stap 3 en 4.</p>
 
 <!-- Vooruitblik -->
 <h4>Vooruitblik</h4>
