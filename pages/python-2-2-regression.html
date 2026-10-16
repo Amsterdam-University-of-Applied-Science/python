@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,64 +6,119 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap CDN CSS -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
 
 	<!-- Course Styles -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
-</head>
-
-<body class="content layout-2" role="document">
-<div class="container-fluid"><main>
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+</head><body><div class="container-fluid"><main>
 <div class="row">
 <div class="col-sm-12">
 <div class="decoration"></div>
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-<h3><span style="font-size: 19px;">Lesplan week 2</span></h3>
-<h3 id="Classification:-Predicting-discrete-labels" style="padding-left: 40px;"></h3>
-<h3 id="Regression:-Predicting-continuous-labels">Regression: Predicting continuous labels</h3>
-<p><img src="https://dlo.mijnhva.nl/content/enforced/764447-FBE-6000MBDA26-BE-FC-2627/sphx_glr_plot_adaboost_regression_thumb.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
-<p>Predicting a continuous-valued attribute associated with an object.</p>
-<h4 id="Simple-Linear-Regression" style="padding-left: 80px;">Simple Linear Regression</h4>
-<h4 id="Basis-Function-Regression" style="padding-left: 80px;">Basis Function Regression</h4>
-<p id="Polynomial-basis-functions" style="padding-left: 120px;">Polynomial basis functions</p>
-<p id="Gaussian-basis-functions" style="padding-left: 120px;">Gaussian basis functions</p>
-<h4 id="Regularization" style="padding-left: 80px;">Regularization</h4>
-<p id="Ridge-regression-($L_2$-Regularization)" style="padding-left: 120px;">Ridge regression</p>
-<p id="Lasso-regression-($L_1$-regularization)" style="padding-left: 120px;">Lasso regression</p>
 <p></p>
-<p>Notebook: <a href="https://colab.research.google.com/drive/16aLc7mENAE69-npDpkgoRCGzVs81MmK-?usp=sharing" target="_blank" title="py2_linear_regression" rel="noopener">py2_linear_regression</a></p>
+
+<!-- 1. Week-strip (8 weken; week 2 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
+<tbody>
+<tr>
+<td>1</td>
+<td style="background-color: #fbeeb8;">2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 2. Titel + onderwerp -->
+<h3><span style="font-size: 19px;">Les 2.2 &mdash; Regression</span></h3>
+<p>Het voorspellen van een continue waarde: <em>regression &mdash; predicting continuous labels</em>. Van simpele lineaire regressie tot basis-functies en regularisatie.</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In les 2.1 haalden we data op uit externe bronnen (CBS, FRED, IMF, Worldbank).</p>
+<h4>Vandaag</h4>
+<p>Onze eerste machine-learning-techniek: lineaire regressie met scikit-learn. We kijken naar simple linear regression, basis-functie-regressie (polynomiaal, Gaussian) en regularisatie (Ridge, Lasso).</p>
+
+<!-- 4. Onderwerpen en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 30%;"><col style="width: 45%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Onderwerp</strong></td>
+<td><strong>Toelichting</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td>Lineaire regressie</td>
+<td>Simple &amp; multiple linear regression, basis-functies, regularisatie (Ridge/Lasso)</td>
+<td><a href="https://colab.research.google.com/drive/16aLc7mENAE69-npDpkgoRCGzVs81MmK-?usp=sharing" target="_blank" rel="noopener">py2_linear_regression</a></td>
+</tr>
+<tr>
+<td>Pandas filter op CBS-data</td>
+<td>Een dataset filteren (CPI-voorbeeld)</td>
+<td><a href="https://colab.research.google.com/drive/1sMpx01xplX3fuD91O5frWUbaOW9Ismnj?usp=sharing" target="_blank" rel="noopener">Test Pandas Filter (CPI)</a></td>
+</tr>
+<tr>
+<td>Vervolg</td>
+<td>Aanvullend regressie-voorbeeld</td>
+<td><a href="https://colab.research.google.com/drive/1uoQN31qdk6kQL2Ad4AckpD2-9lxfqafo?usp=sharing" target="_blank" rel="noopener">Notebook</a></td>
+</tr>
+</tbody>
+</table>
+
+<!-- 5. Library -->
+<h4>Library</h4>
+<ul>
+<li><strong>scikit-learn (<code>sklearn.linear_model</code>):</strong> <code>LinearRegression</code>, <code>Ridge</code>, <code>Lasso</code> voor regressiemodellen. <a href="https://scikit-learn.org/stable/modules/linear_model.html" target="_blank" rel="noopener">Documentatie</a></li>
+</ul>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<!-- Vooruitblik -->
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 2.3) behandelen we classificatie met Naive Bayes.</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
+<ul>
+<li>Quiz: <a href="https://dlo.mijnhva.nl/d2l/lms/quizzing/user/quizzes_list.d2l?ou=764447" target="_blank" rel="noopener">Python - Regressie Quiz</a></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank" rel="noopener">Intro to Machine Learning</a></li>
+</ul>
+
+<!-- Verdieping -->
+<p>Verdieping: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.06-linear-regression.html" target="_blank" rel="noopener">VanderPlas, Data Science Handbook &mdash; In Depth: Linear Regression</a></p>
+
 <p></p>
-<p>Een voorbeeld van een filter in pandas op een CBS dataset: <a href=" https://colab.research.google.com/drive/1sMpx01xplX3fuD91O5frWUbaOW9Ismnj?usp=sharing" target="_blank" title="Test Pandas Filter (CPI)" rel="noopener">Test Pandas Filter (CPI)</a></p>
-<p style="padding-left: 80px;"></p>
-<p></p>
-<a href="https://colab.research.google.com/drive/1uoQN31qdk6kQL2Ad4AckpD2-9lxfqafo?usp=sharing"></a></div>
-<div class="col-xs-12 col-sm-offset-2 col-sm-8"></div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+</div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
 </p>
 <!-- Bootstrap CDN JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 </p>
 <!-- SVG Fallback JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
 </p>
 <!-- Course Scripts -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
 <script>
 		var lang = window.top.document.documentElement.lang;
 
 		if (lang.indexOf('nl') > -1) {
 			$("#logo").addClass("dutch");
 		}
-	</script>
-</p>
-</body></html>
+	</script></p></body></html>

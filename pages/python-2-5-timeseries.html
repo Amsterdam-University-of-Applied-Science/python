@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,104 +6,111 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap CDN CSS -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
 
 	<!-- Course Styles -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
-</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+</head><body><div class="container-fluid"><main>
 <div class="row">
 <div class="col-sm-12">
 <div class="decoration"></div>
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-<h3><span style="font-size: 19px;">Lesplan week 5</span></h3>
-<h2>Time series</h2>
-<h3 id="Dates-and-Times-in-Python">Dates and Times in Python</h3>
-<h4 id="Native-Python-dates-and-times:-datetime-and-dateutil">Native Python dates and times</h4>
-<p>From the standard library:&nbsp;</p>
-<ul>
-<li><a href="https://docs.python.org/3/library/datetime.html" target="_blank" title="datetime" rel="noopener"><code>datetime</code></a></li>
-</ul>
-<p>From pypi (third party):</p>
-<ul>
-<li><code><a href="https://pypi.org/project/python-dateutil/" target="_blank" title="dateutil" rel="noopener">dateutil</a></code></li>
-</ul>
-<p>Uit de python documentatie: "<a title="datetime.date" href="https://docs.python.org/3/library/datetime.html#datetime.date"><code>date</code></a>,&nbsp;<a title="datetime.datetime" href="https://docs.python.org/3/library/datetime.html#datetime.datetime"><code>datetime</code></a>, and&nbsp;<a title="datetime.time" href="https://docs.python.org/3/library/datetime.html#datetime.time"><code>time</code></a>&nbsp;objects all support a&nbsp;<code>strftime(format)</code> method, to create a string representing the time under the control of an explicit format string."</p>
-<p>Cheatsheet voor <a href="https://strftime.org/" title="strftime()">strftime()</a>&nbsp;</p>
-<h4 id="Typed-arrays-of-times:-NumPy's-datetime64">Numpy typed arrays of times</h4>
-<p>From the numpy (np) library:</p>
-<ul>
-<li><a href="https://numpy.org/doc/stable/reference/arrays.datetime.html" target="_blank" title="datetime64" rel="noopener"><code>datetime64 </code></a></li>
-<li><a href="https://numpy.org/doc/stable/reference/arrays.datetime.html" target="_blank" title="timedelta64" rel="noopener"><code>timedelta64 </code></a></li>
-</ul>
-<p>note: trade-off between time resolution and time range (due to 64 bit limit).</p>
-<ul>
-<li>resolutie: nanosecond &gt; tijdspanne: ± 292 years&nbsp;</li>
-</ul>
-<h4 id="Dates-and-times-in-pandas:-best-of-both-worlds">Pandas dates and times</h4>
-<p>Een mix van standaard python en numpy date/time functies. Bijvoorbeeld:</p>
-<ul>
-<li>
-<pre>date = pd.to_datetime("4th of July, 2015") zoals met dateutils</pre>
-</li>
-<li>
-<pre>date + pd.to_timedelta(np.arange(12), 'D') zoals met numpy</pre>
-</li>
-</ul>
-<h3 id="Pandas-Time-Series:-Indexing-by-Time">Pandas Time Series</h3>
-<h4 id="Pandas-Time-Series-Data-Structures">Pandas Time Series Data Structures</h4>
-<ul>
-<li><code>timestamp</code>&nbsp;</li>
-<li><code>period</code></li>
-<li><code>timedelta </code></li>
-</ul>
-<h4 id="Frequencies-and-Offsets">Frequencies and Offsets</h4>
 <p></p>
-<h3 id="Resampling,-Shifting,-and-Windowing">Resampling, Shifting, and Windowing</h3>
-<h4 id="Resampling-and-converting-frequencies">Resampling and converting frequencies</h4>
-<ul>
-<li><code>resample</code></li>
-<li><code>asfreq</code></li>
-</ul>
-<h4 id="Time-shifts">Time-shifts</h4>
-<p>Een <a href="https://colab.research.google.com/drive/1oDEkXEQDd-40hc_BS_OyI12_vscx6PLW?usp=sharing" target="_blank" title="voorbeeld " rel="noopener">voorbeeld </a>van het gebruik van shift (en tshift). -&gt; tshift is "legacy" pandas 2.x ofwel werkt niet meer. aanroepen met shift(periods= ,frequency= )</p>
-<h4 id="Rolling-windows">Rolling windows</h4>
-<p></p>
-<p>Links:</p>
-<table border="1" style="border-collapse: collapse; width: 99.9373%;">
+
+<!-- 1. Week-strip (8 weken; week 5 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
 <tbody>
 <tr>
-<td style="width: 24.9814%; text-align: center;"><a href="https://colab.research.google.com/drive/1ahr84cBcxGA0481Jhw_UJFz_fcQQC8iV?usp=sharing" target="_blank" title="Voorbeeld" rel="noopener">Voorbeeld</a></td>
-<td style="width: 24.9814%; text-align: center;"><a href="https://dlo.mijnhva.nl/d2l/le/content/441103/viewContent/1467580/View" target="_blank" title="Oefening" rel="noopener">Oefening</a></td>
-<td style="width: 24.9814%; text-align: center;"><a href="https://dlo.mijnhva.nl/d2l/le/content/441103/viewContent/1467580/View" target="_blank" title="Uitwerking" rel="noopener">Uitwerking</a></td>
-<td style="width: 24.983%; text-align: center;">Quiz</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td style="background-color: #fbeeb8;">5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
 </tr>
 </tbody>
 </table>
-<p>References:</p>
-<p><a href="http://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html" target="_blank" title="Pandas documentation: Time series / Date functionality" rel="noopener">Pandas documentation: Time series / Date functionality</a></p>
-<p><a href="https://dlo.mijnhva.nl/d2l/le/content/441103/viewContent/1482183/View" target="_blank" title="Python for Data Analysis (2018)" rel="noopener">Python for Data Analysis (2018)</a></p>
-<p><a href="https://github.com/facebook/prophet" target="_top" title="Prophet ">Prophet </a>(Facebook Library for Time Series Analysis)</p>
+
+<!-- 2. Titel + onderwerp -->
+<h3><span style="font-size: 19px;">Les 2.5 &mdash; Time Series</span></h3>
+<p>Werken met tijdreeksen in pandas: datums en tijden, indexeren op tijd, resampling, shifting en rolling windows.</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In les 2.4 bouwden we decision trees en random forests.</p>
+<h4>Vandaag</h4>
+<p>Tijdreeksen. We combineren drie werelden voor datum/tijd: standaard Python (<code>datetime</code>, <code>dateutil</code>), NumPy (<code>datetime64</code>, <code>timedelta64</code>) en pandas (<code>timestamp</code>, <code>period</code>, <code>timedelta</code>). Daarna: resampling, time-shifts en rolling windows.</p>
+
+<!-- 4. Onderwerpen en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 30%;"><col style="width: 45%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Onderwerp</strong></td>
+<td><strong>Toelichting</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td>Time series (algemeen)</td>
+<td>Datum/tijd, indexeren, resampling, rolling windows</td>
+<td><a href="https://colab.research.google.com/drive/1ahr84cBcxGA0481Jhw_UJFz_fcQQC8iV?usp=sharing" target="_blank" rel="noopener">Voorbeeld</a></td>
+</tr>
+<tr>
+<td>Shifting</td>
+<td>Gebruik van <code>shift</code> (en de legacy <code>tshift</code>)</td>
+<td><a href="https://colab.research.google.com/drive/1oDEkXEQDd-40hc_BS_OyI12_vscx6PLW?usp=sharing" target="_blank" rel="noopener">Voorbeeld shift</a></td>
+</tr>
+</tbody>
+</table>
+<p>Cheatsheet: <a href="https://strftime.org/" target="_blank" rel="noopener">strftime()</a>. Voor forecasting is <a href="https://github.com/facebook/prophet" target="_blank" rel="noopener">Prophet</a> (Meta) een bekende library.</p>
+
+<!-- 5. Library -->
+<h4>Library</h4>
+<ul>
+<li><strong>pandas (time series):</strong> <code>to_datetime</code>, <code>resample</code>, <code>asfreq</code>, <code>rolling</code>. <a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html" target="_blank" rel="noopener">Documentatie</a></li>
+</ul>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<!-- Vooruitblik -->
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 2.6) behandelen we principal component analysis (PCA).</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
+<ul>
+<li>Quiz: <a href="https://dlo.mijnhva.nl/d2l/lms/quizzing/user/quizzes_list.d2l?ou=764447" target="_blank" rel="noopener">Python - Time Series Quiz</a></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/time-series" target="_blank" rel="noopener">Time Series</a></li>
+</ul>
+
+<!-- Verdieping -->
+<p>Verdieping: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/03.11-working-with-time-series.html" target="_blank" rel="noopener">VanderPlas, Data Science Handbook &mdash; Working with Time Series</a></p>
+
+<p></p>
 </div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
 </p>
 <!-- Bootstrap CDN JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 </p>
 <!-- SVG Fallback JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
 </p>
 <!-- Course Scripts -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
 <script>
 		var lang = window.top.document.documentElement.lang;
 

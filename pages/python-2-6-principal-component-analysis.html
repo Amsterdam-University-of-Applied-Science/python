@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,66 +6,115 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap CDN CSS -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
 
 	<!-- Course Styles -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
-</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+</head><body><div class="container-fluid"><main>
 <div class="row">
 <div class="col-sm-12">
 <div class="decoration"></div>
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-<h3><span style="font-size: 19px;">Lesplan week 6</span></h3>
-<h1>Principal Component Analysis (PCA)</h1>
-<p><img src="https://dlo.mijnhva.nl/content/enforced/764447-FBE-6000MBDA26-BE-FC-2627/sphx_glr_plot_pca_iris_thumb.png" alt="PCA" title="PCA" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
-<p>PCA is één van de technieken t.b.v. "dimensionality reduction" (Reducing the number of random variables to consider.) PCA is een snelle en flexibele <strong>unsupervised</strong> methode.</p>
-<p>Het verschil met lineaire regressie zit hem erin dat:</p>
-<ul>
-<li>Bij lineaire regressie voorspelt men een y (output) waarde gegeven een aantal x (input) waardes</li>
-<li>Bij PCA zoekt men naar de sterkte van het verband tussen de x'en en y'en.&nbsp;</li>
-</ul>
-<p><img src="https://dlo.mijnhva.nl/content/enforced/764447-FBE-6000MBDA26-BE-FC-2627/File_aec84e7b11ae43b787cf9d48f5616a61_image_6290866121671601910146.png" width="485" height="316"><img src="https://dlo.mijnhva.nl/content/enforced/764447-FBE-6000MBDA26-BE-FC-2627/components.png" alt="" title="" data-d2l-editor-default-img-style="true" style="max-width: 100%;"></p>
-<p>PCA kent verschillende toepassingen waaronder:</p>
-<ul>
-<li>Visualisatie</li>
-<li>Ruis onderdrukking</li>
-<li>Portfolio selectie</li>
-</ul>
-<p>Voorbeeld van het gebruik van <a href="https://colab.research.google.com/drive/1zYkmmI3b7LzJYwtfO8lGbJHNzE46ZcHc?usp=sharing" target="_blank" rel="noopener">ipywidgets </a>(PCA Illustrated).</p>
-<p>Vervolg (<a href="https://colab.research.google.com/drive/1fBuSOktGNmXS3iNeISC2VqBBDxKYVdgY?usp=sharing" target="_blank" title="notebook" rel="noopener">notebook)</a></p>
-<br>
-<table style="width: 749.525px;" border="1">
+<p></p>
+
+<!-- 1. Week-strip (8 weken; week 6 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
 <tbody>
 <tr>
-<td style="width: 187.125px;"><a href="https://colab.research.google.com/drive/1GIY4BNJKTTDd21s91Qhb63XKjztcWJJK?usp=sharing" target="_blank" title="Voorbeeld" rel="noopener">Voorbeeld</a><span aria-hidden="true"></span></td>
-<td style="width: 187.125px;"><a href="https://dlo.mijnhva.nl/d2l/le/content/441103/viewContent/1467589/View" target="_blank" title="Oefening" rel="noopener">Oefening<span aria-hidden="true"></span></a></td>
-<td style="width: 187.125px;">Uitwerking<span aria-hidden="true"></span></td>
-<td style="width: 187.15px;">Quiz</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td style="background-color: #fbeeb8;">6</td>
+<td>7</td>
+<td>8</td>
 </tr>
 </tbody>
 </table>
-<p>References:&nbsp;<a href="https://scikit-learn.org/stable/modules/decomposition.html#pca" target="_blank" title="scikit-learn" rel="noopener">scikit-learn</a>, 2.5.1 Principal Component Analysis</p>
+
+<!-- 2. Titel + onderwerp -->
+<h3><span style="font-size: 19px;">Les 2.6 &mdash; Principal Component Analysis</span></h3>
+<p>PCA is een snelle, flexibele <strong>unsupervised</strong> techniek voor dimensionality reduction: het terugbrengen van het aantal variabelen.</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In les 2.5 werkten we met tijdreeksen in pandas.</p>
+<h4>Vandaag</h4>
+<p>Principal Component Analysis. Anders dan regressie (die een y voorspelt uit x'en) zoekt PCA naar de sterkte van het verband tussen de variabelen onderling. Toepassingen: visualisatie, ruisonderdrukking en portfolioselectie.</p>
+
+<!-- 4. Onderwerpen en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 30%;"><col style="width: 45%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Onderwerp</strong></td>
+<td><strong>Toelichting</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td>PCA</td>
+<td>Dimensionality reduction, componenten</td>
+<td><a href="https://colab.research.google.com/drive/1GIY4BNJKTTDd21s91Qhb63XKjztcWJJK?usp=sharing" target="_blank" rel="noopener">Voorbeeld</a></td>
+</tr>
+<tr>
+<td>PCA illustrated (ipywidgets)</td>
+<td>Interactieve illustratie</td>
+<td><a href="https://colab.research.google.com/drive/1zYkmmI3b7LzJYwtfO8lGbJHNzE46ZcHc?usp=sharing" target="_blank" rel="noopener">ipywidgets</a></td>
+</tr>
+<tr>
+<td>Vervolg</td>
+<td>Aanvullend PCA-voorbeeld</td>
+<td><a href="https://colab.research.google.com/drive/1fBuSOktGNmXS3iNeISC2VqBBDxKYVdgY?usp=sharing" target="_blank" rel="noopener">Notebook</a></td>
+</tr>
+</tbody>
+</table>
+
+<!-- 5. Library -->
+<h4>Library</h4>
+<ul>
+<li><strong>scikit-learn (<code>sklearn.decomposition</code>):</strong> <code>PCA</code> voor dimensionality reduction. <a href="https://scikit-learn.org/stable/modules/decomposition.html#pca" target="_blank" rel="noopener">Documentatie</a></li>
+</ul>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<!-- Vooruitblik -->
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 2.7) passen we sentiment analysis toe op financieel nieuws.</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
+<ul>
+<li>Quiz: <a href="https://dlo.mijnhva.nl/d2l/lms/quizzing/user/quizzes_list.d2l?ou=764447" target="_blank" rel="noopener">Python - Principal Component Analysis Quiz</a></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank" rel="noopener">Intro to Machine Learning</a></li>
+</ul>
+
+<!-- Verdieping -->
+<p>Verdieping: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/05.09-principal-component-analysis.html" target="_blank" rel="noopener">VanderPlas, Data Science Handbook &mdash; In Depth: Principal Component Analysis</a></p>
+
+<p></p>
 </div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
 </p>
 <!-- Bootstrap CDN JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 </p>
 <!-- SVG Fallback JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
 </p>
 <!-- Course Scripts -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
 <script>
 		var lang = window.top.document.documentElement.lang;
 

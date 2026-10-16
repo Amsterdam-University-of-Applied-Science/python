@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,107 +6,123 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap CDN CSS -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
 
 	<!-- Course Styles -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
-</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+</head><body><div class="container-fluid"><main>
 <div class="row">
 <div class="col-sm-12">
-<h3 class="decoration"></h3>
+<div class="decoration"></div>
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-<h3><span style="font-size: 19px;">Lesplan week 1</span></h3>
-<h3>3. Code y-finance</h3>
-<div>
-<div># in deze module wordt gebruik gemaakt van de yfinance library</div>
-<br>
-<div>def get_company_info(ticker):</div>
-<div>&nbsp; &nbsp; try:</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; # Create a Ticker object</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; ticker_obj = yf.Ticker(ticker)</div>
-<br>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; # Get the company info</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; info = ticker_obj.info</div>
-<br>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; # Extract company name and address</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; company_name = info.get('longName', 'Name not available')</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; company_address = info.get('address1', 'Address not available')</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; company_city = info.get('city', 'City not available')</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; company_state = info.get('state', 'State not available')</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; company_zip = info.get('zip', 'Zip not available')</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; company_country = info.get('country', 'Country not available')</div>
-<br>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; return {</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'name': company_name,</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'address': company_address,</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'city': company_city,</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'state': company_state,</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'zip': company_zip,</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'country': company_country</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; }</div>
-<div>&nbsp; &nbsp; except Exception as e:</div>
-<div>&nbsp; &nbsp; &nbsp; &nbsp; return f"An error occurred: {str(e)}"</div>
-<br>
-<div>ticker = "TSLA"</div>
-<div>company_info = get_company_info(ticker) &nbsp;# Store the result in a variable</div>
-<br>
-<div># Print company info in address format</div>
-<div>print(f"{company_info['name']}\n{company_info['address']}\n{company_info['city']}\n{company_info['state']}, {company_info['zip']}\n{company_info['country']}")</div>
-<div></div>
-<div></div>
-</div>
-<table border="1" style="border-collapse: collapse; width: 100.046%;"><colgroup><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"><col style="width: 14.2857%;"></colgroup>
+<p></p>
+
+<!-- 1. Week-strip (8 weken; week 1 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
 <tbody>
 <tr>
 <td style="background-color: #fbeeb8;">1</td>
-<td style="background-color: #ffffff;">2</td>
+<td>2</td>
 <td>3</td>
 <td>4</td>
 <td>5</td>
 <td>6</td>
 <td>7</td>
+<td>8</td>
 </tr>
 </tbody>
 </table>
-<h3>1. Prompt generation (openAI)</h3>
-<p>&nbsp;Stappen voor het genereren van een prompt uit pandas:</p>
+
+<!-- 2. Titel + onderwerp -->
+<h3><span style="font-size: 19px;">Les 2.1 &mdash; Databronnen</span></h3>
+<p>Werken met externe databronnen voor stage- en afstudeeropdrachten: prompt generation, CBS (NL) en internationale/macro-economische bronnen (FRED, IMF, Worldbank).</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In blok 1 leerde je Python en de data-science-libraries (NumPy, pandas, matplotlib). Die zet je nu in op echte data.</p>
+<h4>Vandaag</h4>
+<p>We verkennen waar je data vandaan haalt en hoe je die inleest: een prompt genereren met OpenAI, en databronnen zoals CBS, FRED, IMF en Worldbank aanspreken via hun API's en libraries.</p>
+
+<!-- 4. Onderwerpen en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 30%;"><col style="width: 45%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Onderwerp</strong></td>
+<td><strong>Bron</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td>Prompt generation (OpenAI)</td>
+<td>Vraag stellen in de playground, code naar Colab kopi&euml;ren</td>
+<td><a href="https://colab.research.google.com/drive/1ifNmAKWjz8V3I1_czbEAjw-wvP4SRETW?usp=sharing" target="_blank" rel="noopener">example-prompt-pandas</a></td>
+</tr>
+<tr>
+<td>CBS (NL)</td>
+<td><a href="https://github.com/statistiekcbs" target="_blank" rel="noopener">cbs odata v3 en v4 libraries</a></td>
+<td><a href="https://colab.research.google.com/drive/1B8u2SD1W_Y_230YBZDyPBP_oBSvl4NZ2?usp=sharing" target="_blank" rel="noopener">geopandas</a> &middot; <a href="https://colab.research.google.com/drive/1WFQ2E7j_YxGQdKMXlkoqhv4wpAQCOJ4h?usp=sharing" target="_blank" rel="noopener">geopandas (2)</a> &middot; <a href="https://colab.research.google.com/drive/1abnDBC8VqBhnqaRZhwGt79HD7EVW_wK7?usp=sharing" target="_blank" rel="noopener">cartography</a> &middot; <a href="https://colab.research.google.com/drive/1Tru02ZsgdgvBP1nmfQ6sctgqjkmIilxG?usp=sharing" target="_blank" rel="noopener">xkcd font</a></td>
+</tr>
+<tr>
+<td>FRED (VS, Federal Reserve)</td>
+<td>Gratis API-key na registratie</td>
+<td><a href="https://colab.research.google.com/drive/1KekrnruNMELsKeIIK9C13e26QS1opwiE?usp=sharing" target="_blank" rel="noopener">Sample FRED Colab</a></td>
+</tr>
+<tr>
+<td>IMF</td>
+<td>Internationale macro-economische data</td>
+<td>&mdash; (notebook volgt)</td>
+</tr>
+<tr>
+<td>Worldbank</td>
+<td>Internationale ontwikkelingsdata</td>
+<td>&mdash; (notebook volgt)</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 5. Library -->
+<h4>Libraries</h4>
 <ul>
-<li>Genereer een API Key</li>
-<li>Stel een vraag aan OpenAI in de playground</li>
-<li>Open google colab en kopier de python code uit de playground</li>
-<li>Voorbeeld gebruik notebook: <a href="https://colab.research.google.com/drive/1ifNmAKWjz8V3I1_czbEAjw-wvP4SRETW?usp=sharing" target="_blank" title="example-prompt-pandas" rel="noopener">example-prompt-pandas</a></li>
+<li><strong>pandas:</strong> inlezen en bewerken van de opgehaalde tabeldata. <a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener">Documentatie</a></li>
+<li><strong>geopandas:</strong> ruimtelijke data en kaarten (CBS-voorbeeld). <a href="https://geopandas.org/" target="_blank" rel="noopener">Documentatie</a></li>
 </ul>
-<p></p>
-<h3>2. CBS</h3>
-<p>mogelijke databron voor stages en afstudeeropdrachten</p>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<!-- Vooruitblik -->
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 2.2) starten we met machine learning: lineaire regressie met scikit-learn.</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
 <ul>
-<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://github.com/statistiekcbs" target="_blank" title="cbs odata v3 en v4 libraries" rel="noopener">cbs odata v3 en v4 libraries</a></li>
-<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://colab.research.google.com/drive/1B8u2SD1W_Y_230YBZDyPBP_oBSvl4NZ2?usp=sharing" target="_blank" title="geopandas library" rel="noopener">geopandas library</a></li>
-<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://colab.research.google.com/drive/1abnDBC8VqBhnqaRZhwGt79HD7EVW_wK7?usp=sharing" target="_blank" title="cartography example" rel="noopener">cartography example</a></li>
-<li class="col-xs-12 col-sm-offset-2 col-sm-8"><a href="https://colab.research.google.com/drive/1Tru02ZsgdgvBP1nmfQ6sctgqjkmIilxG?usp=sharing" target="_blank" title="xkcd font" rel="noopener">xkcd font</a></li>
+<li>Quiz: <em>volgt</em></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/intro-to-machine-learning" target="_blank" rel="noopener">Intro to Machine Learning</a></li>
 </ul>
+
 <p></p>
 </div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
 </p>
 <!-- Bootstrap CDN JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 </p>
 <!-- SVG Fallback JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
 </p>
 <!-- Course Scripts -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
 <script>
 		var lang = window.top.document.documentElement.lang;
 

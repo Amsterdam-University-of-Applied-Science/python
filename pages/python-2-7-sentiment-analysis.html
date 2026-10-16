@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en"><head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -6,52 +6,121 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Bootstrap CDN CSS -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/css/bootstrap.min.css">
 
 	<!-- Course Styles -->
-	<link rel="stylesheet" href="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
-</head><body class="content layout-2" role="document"><div class="container-fluid"><main>
+	<link rel="stylesheet" href="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/css/main.min.css">
+</head><body><div class="container-fluid"><main>
 <div class="row">
 <div class="col-sm-12">
 <div class="decoration"></div>
 </div>
 <div class="col-xs-12 col-sm-offset-2 col-sm-8">
-<h3><span style="font-size: 19px;">Lesplan week 7</span></h3>
 <p></p>
-<p>Om zelf een sentiment analyse toe te passen op nieuws items dient eerst een set nieuwsberichten te worden gemaakt (1). Vervolgens kan aan de hand van bestaande modellen een sentiment analyse op deze set nieuwsberichten worden uitgevoerd (2). Tenslotte kan het verloop van de sentimentscore vergeleken worden met het verloop van de koers (3).</span></p>
-<ol>
-<li><a href="https://colab.research.google.com/drive/1VK7Vhg1RQFTTnRqiw5Kl9zq_QCsQlK93?usp=sharing" target="_blank" rel="noopener">Google Colab (Financieel) nieuws databronnen</a></span></li>
-<li><a href="https://colab.research.google.com/drive/1ovr2fGOBDS-jXdTTWUyeIek9byM-O1ct?usp=sharing" target="_blank" rel="noopener">vergelijking 3 pre-trained modellen: VADER, TextBlob, HuggingFace</a></span></li>
-<li><a href="https://www.kaggle.com/code/janrumuller/nltk-exercise-gold-bitcoin" target="_blank" rel="noopener">Work in progress, discover sentiment on Bitcoin and Gold</span></a></li>
-</ol>
-<p></p>
-<h1>Voorbeelden op Kaggle</span></h1>
-<p><a href="https://www.kaggle.com/datasets/equinxx/stock-tweets-for-sentiment-analysis-and-prediction?select=stock_tweets.csv" target="_blank" rel="noopener">Link: Stock Tweets for Sentiment Analysis and Prediction</span></a> (csv bestand, 80k tweets met ticker)</span></span></p>
-<p><a href="https://www.kaggle.com/code/mmmarchetti/sentiment-analysis-on-financial-news/notebook" target="_blank" rel="noopener">Link: Sentiment Analysis on&nbsp;Financial News</a> (webscraping, niet gebruiken eventueel niet toegestaan)</span></p>
-<p><a href="https://www.kaggle.com/code/gpreda/wallstreetbets-reddit-posts-analysis" target="_blank" rel="noopener">Link: WallStreetBets Reddit Posts Analysis</a> (wordclouds)</span></p>
-<p>Niet financieel voorbeeld:</span></p>
-<p><a href="https://www.kaggle.com/code/lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews" target="_blank" rel="noopener">Link: Sentiment Analysis of IMDB Movie Reviews</a> </span></p>
+
+<!-- 1. Week-strip (8 weken; week 7 gemarkeerd) -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"><col style="width: 12.5%;"></colgroup>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td style="background-color: #fbeeb8;">7</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 2. Titel + onderwerp -->
+<h3><span style="font-size: 19px;">Les 2.7 &mdash; Sentiment Analysis</span></h3>
+<p>Sentiment-analyse op financieel nieuws: (1) een set nieuwsberichten verzamelen, (2) met bestaande modellen een sentimentscore bepalen, (3) de score vergelijken met het koersverloop.</p>
+
+<!-- 3. Planning & intro -->
+<h4>Terugblik</h4>
+<p>In les 2.6 pasten we PCA toe voor dimensionality reduction.</p>
+<h4>Vandaag</h4>
+<p>Natural language processing: we bepalen het sentiment van nieuwsberichten met pre-trained modellen (VADER, TextBlob, HuggingFace) en vergelijken dat met de koers.</p>
+
+<!-- 4. Onderwerpen en notebooks -->
+<table border="1" style="border-collapse: collapse; width: 100%;"><colgroup><col style="width: 30%;"><col style="width: 45%;"><col style="width: 25%;"></colgroup>
+<tbody>
+<tr style="background-color: #f5f5f5;">
+<td><strong>Stap</strong></td>
+<td><strong>Toelichting</strong></td>
+<td><strong>Notebook</strong></td>
+</tr>
+<tr>
+<td>1. Nieuwsbronnen</td>
+<td>(Financieel) nieuws als databron verzamelen</td>
+<td><a href="https://colab.research.google.com/drive/1VK7Vhg1RQFTTnRqiw5Kl9zq_QCsQlK93?usp=sharing" target="_blank" rel="noopener">Google Colab</a></td>
+</tr>
+<tr>
+<td>2. Modellen vergelijken</td>
+<td>VADER, TextBlob, HuggingFace naast elkaar</td>
+<td><a href="https://colab.research.google.com/drive/1ovr2fGOBDS-jXdTTWUyeIek9byM-O1ct?usp=sharing" target="_blank" rel="noopener">3 pre-trained modellen</a></td>
+</tr>
+<tr>
+<td>3. Toepassing</td>
+<td>Sentiment op Bitcoin en Goud (work in progress)</td>
+<td><a href="https://www.kaggle.com/code/janrumuller/nltk-exercise-gold-bitcoin" target="_blank" rel="noopener">Kaggle notebook</a></td>
+</tr>
+</tbody>
+</table>
+<p>Voorbeelden en datasets op Kaggle:</p>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/equinxx/stock-tweets-for-sentiment-analysis-and-prediction?select=stock_tweets.csv" target="_blank" rel="noopener">Stock Tweets for Sentiment Analysis and Prediction</a> (csv, 80k tweets met ticker)</li>
+<li><a href="https://www.kaggle.com/code/mmmarchetti/sentiment-analysis-on-financial-news/notebook" target="_blank" rel="noopener">Sentiment Analysis on Financial News</a> (webscraping &mdash; let op gebruiksvoorwaarden)</li>
+<li><a href="https://www.kaggle.com/code/gpreda/wallstreetbets-reddit-posts-analysis" target="_blank" rel="noopener">WallStreetBets Reddit Posts Analysis</a> (wordclouds)</li>
+<li><a href="https://www.kaggle.com/code/lakshmi25npathi/sentiment-analysis-of-imdb-movie-reviews" target="_blank" rel="noopener">Sentiment Analysis of IMDB Movie Reviews</a> (niet-financieel voorbeeld)</li>
+</ul>
+
+<!-- 5. Library -->
+<h4>Libraries</h4>
+<ul>
+<li><strong>NLTK / VADER:</strong> lexicon-gebaseerde sentimentanalyse. <a href="https://www.nltk.org/" target="_blank" rel="noopener">Documentatie</a></li>
+<li><strong>TextBlob:</strong> eenvoudige NLP-API. <a href="https://textblob.readthedocs.io/" target="_blank" rel="noopener">Documentatie</a></li>
+<li><strong>HuggingFace Transformers:</strong> moderne, pre-trained taalmodellen. <a href="https://huggingface.co/docs/transformers/" target="_blank" rel="noopener">Documentatie</a></li>
+</ul>
+
+<!-- 6. Class assignment -->
+<h4>Class assignment</h4>
+<p>De opdracht die je deze les inlevert (1,25pt).</p>
+
+<!-- Vooruitblik -->
+<h4>Vooruitblik</h4>
+<p>Volgende week (les 2.8) sluiten we af met feature engineering.</p>
+
+<!-- 7. Oefenen -->
+<h4>Oefenen</h4>
+<ul>
+<li>Quiz: <a href="https://dlo.mijnhva.nl/d2l/lms/quizzing/user/quizzes_list.d2l?ou=764447" target="_blank" rel="noopener">Sentiment Analysis Quiz</a></li>
+<li>Kaggle e-learning (1,25pt): bijvoorbeeld <a href="https://www.kaggle.com/learn/natural-language-processing" target="_blank" rel="noopener">Natural Language Processing</a></li>
+</ul>
+
 <p></p>
 </div>
 </div>
-<footer>
-<div id="logo" class="logo pull-right"></div>
+<footer style="padding-left: 40px;">
+<div id="logo" class="logo pull-right" style="padding-left: 40px;"></div>
 </footer></main></div>
 <!-- jQuery local fallback (Bootstrap Dependency) -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/jquery/jquery-1.11.3.min.js"></script>
 </p>
 <!-- Bootstrap CDN JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 </p>
 <!-- SVG Fallback JS -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/thirdpartylib/svg4everybody/svg4everybody.min.js"></script>
 </p>
 <!-- Course Scripts -->
 <p>
-<script src="https://dlo.mijnhva.nl/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
+<script src="/shared/HTML-Template-Library/HTML-Template-HvA-2019/HvA_Template/hva_templates_2019/../assets/js/main.min.js"></script>
 <script>
 		var lang = window.top.document.documentElement.lang;
 
